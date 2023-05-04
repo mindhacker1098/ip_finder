@@ -1,5 +1,5 @@
 var app = require("express")();
-
+app.set('trust proxy',true);
 app.get("/", function (req, res) {
   console.log(req.socket.remoteAddress);
   console.log(req.ip);
